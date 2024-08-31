@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pdf_books_lib/constants/project_const.dart';
+import 'package:pdf_books_lib/models/expenses/screen/view_expense_screen.dart';
 import 'package:pdf_books_lib/models/pdf_books/screens/display_books.dart';
 
 class MyDarwerScreen extends StatelessWidget {
@@ -41,6 +42,12 @@ class MyDarwerScreen extends StatelessWidget {
             trailing: const Icon(Icons.arrow_right_rounded),
             onTap: () {
               Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ExpenseViewScreen(),
+                ),
+              );
             },
           ),
           ListTile(
@@ -48,11 +55,13 @@ class MyDarwerScreen extends StatelessWidget {
             title: const Text('My Library'),
             trailing: const Icon(Icons.arrow_right_rounded),
             onTap: () {
+              Navigator.pop(context);
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const DisplayBooksScreen(),
-                  ));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DisplayBooksScreen(),
+                ),
+              );
             },
           ),
           ListTile(
