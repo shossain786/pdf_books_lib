@@ -17,6 +17,7 @@ class AddExpenseEvent extends ExpenseEvent {
   });
 }
 
+
 class EditExpenseEvent extends ExpenseEvent {
   late String expenseType;
   late String expenseAmount;
@@ -29,3 +30,5 @@ class EditExpenseEvent extends ExpenseEvent {
     required this.details,
   });
 }
+
+class FetchExpenseEvent extends ExpenseEvent {}

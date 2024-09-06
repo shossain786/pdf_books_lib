@@ -6,6 +6,8 @@ sealed class ExpenseState {}
 
 final class ExpenseInitial extends ExpenseState {}
 
+class AddExpenseLoadingState extends ExpenseState {}
+
 //! Add Expense Events
 class AddExpenseSuccessState extends ExpenseState {
   late String successMessage;
